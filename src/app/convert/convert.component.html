@@ -1,0 +1,19 @@
+<div class="container mt-5">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label class="text-success" for="cantidad">Ingrese numero</label>
+      <input type="number" id="cantidad" class="form-control form-control-lg font-text" [(ngModel)]="cantidad" placeholder="Ingrese cantidad" (input)="convertir()">
+    </div>
+    <div class="form-group col-md-6">
+      <label class="text-success" for="miBase">Base</label>
+      <select class="form-control form-control-lg font-text" id="miBase" [(ngModel)]="miBase" (change)="convertir()">
+        <option *ngFor="let base of bases">{{ base }}</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="text-success" for="resultado">Resultado</label>
+    <input type="text" id="resultado" class="form-control form-control-lg font-text" [(ngModel)]="result"
+    placeholder="0" readonly>
+  </div>
+</div>
